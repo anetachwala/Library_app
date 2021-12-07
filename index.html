@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	      <link rel="stylesheet" href="styles.css">
+        <title>Library</title>
+    </head>
+    <body>
+      <div class="container">
+        <h2>Add a book</h2>
+        <form class="form" onsubmit="handleSubmit(event)">
+          <div>
+            <label>Title:</label>
+            <input type="text" name="title" minlength="1" maxlength="25" required />
+          </div>
+          <div>
+            <label>Author:</label>
+            <input type="text" name="author" minlength="3" maxlength="25" required />
+          </div>
+          <div>
+            <label>Priority:</label>
+            <input type="number" name="priority" min="1" max="5" value="1" required />
+          </div>
+          <div>
+            <label>Category:</label>
+            <select name="category">
+              <option value="romance">Romance</option>
+              <option value="fantasy">Fantasy</option>
+              <option value="thriller">Thriller</option>
+            </select>
+          </div>
+          <input
+            type="submit"
+            id="submit"
+            value="Save"
+          />
+        </form>
+      
+        <table class="table">
+          <tr>
+            <th>Lp</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Priority</th>
+            <th>Category</th>
+          </tr>
+        </table>
+      </div>
+
+	    <script src="script.js"></script>
+    </body>
+</html>
